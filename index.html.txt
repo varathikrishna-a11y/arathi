@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+      background: #ffdde1;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background-color: #666;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hi AMAL Varayil! Will you be my Valentine? 💖</h1>
+  <p>(Please choose wisely 😌)</p>
+
+  <div>
+    <button id="yes" onclick="yesClicked()">Yes 💕</button>
+    <button id="no" onclick="noClicked()">No 😶</button>
+  </div>
+
+  <script>
+    let yesSize = 20;
+    let noSize = 20;
+
+    function yesClicked() {
+      document.body.innerHTML = "<h1>YAYYY 🥰 I knew it! 💖</h1><p>Happy Valentine’s Day 💌</p>";
+    }
+
+    function noClicked() {
+      noSize -= 4;
+      if (noSize < 8) noSize = 8;
+      document.getElementById("no").style.fontSize = noSize + "px";
+      yesSize += 6;
+      document.getElementById("yes").style.fontSize = yesSize + "px";
+    }
+  </script>
+
+</body>
+</html>
